@@ -41,8 +41,8 @@ jobs:
         with:
           project_id: ${{ secrets.PROJECT_ID }}
           deliverables: app.yaml
-          credentials: ${{ secrets.GCP_SA_KEY_JSON}}
           version: v1
+          working_directory: .
 
       # use the output
       - name: Test the deployed app 🧪
