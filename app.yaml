@@ -1,0 +1,8 @@
+runtime: python39
+api_version: 1
+threadsafe: true
+instance_class: B1
+service: default
+basic_scaling:
+  max_instances: 1
+  idle_timeout: 5m
