@@ -1,11 +1,11 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Google App Engine Action" />
+  <img src="./graphic.png" alt="Google App Engine Action" />
 
 &#xa0;
 
 </div>
 
-<h1 align="center">Google App Engine Action</h1>
+<h1 align="center">Google App Engine with GitHub Actions</h1>
 
 <p align="center">
   <img alt="CD" src="https://github.com/devenes/google-app-engine-action/actions/workflows/main.yaml/badge.svg">
