@@ -1,14 +1,26 @@
+# This specifies the Go runtime version to use for the App Engine service
 runtime: go119
+# This specifies the environment to use for the App Engine service. The default environment is "standard".
 env: standard
+# This specifies the instance class to use for the App Engine service.
 instance_class: B1
+# This specifies the basic scaling configuration for the App Engine service.
+# The idle timeout specifies the amount of time that an instance can be idle before it is terminated.
+# The max instances specifies the maximum number of instances that can be created.
 basic_scaling:
   idle_timeout: 300s
   max_instances: 1
-
+# This specifies the static file handler for the App Engine service.
+# The url specifies the URL pattern that the handler will match.
+# The static_files specifies the path to the static files directory.
+# The upload specifies the path to the directory where uploaded files will be stored.
 handlers:
   - url: /(.*\.(html|css))$
     static_files: static/\1
     upload: static/.*\.(html|css)$
-
+  
+  # This specifies the default handler for the App Engine service.
+  # The url specifies the URL pattern that the handler will match.
+  # The script specifies the path to the script that will be executed when the URL pattern is matched.
   - url: /.*
     script: auto
