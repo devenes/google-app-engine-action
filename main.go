@@ -11,12 +11,16 @@ import (
 
 func main() {
 	port := "80"
+
+	// Check if the PORT environment variable is set
 	if fromEnv := os.Getenv("PORT"); fromEnv != "" {
 		port = fromEnv
 	}
 
+	// Serve static files from the "./static" directory
 	http.Handle("/", http.FileServer(http.Dir("./static")))
 
+	// Start the HTTP server in a goroutine
 	log.Printf("Server starting on port %s", port)
 	go func() {
 		if err := http.ListenAndServe(":"+port, nil); err != nil {
@@ -24,6 +28,7 @@ func main() {
 		}
 	}()
 
+	// Open the browser with the URL
 	url := "http://localhost:" + port
 	var err error
 	switch runtime.GOOS {
