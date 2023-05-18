@@ -63,7 +63,8 @@ gcloud app create
 # Deploy the app
 gcloud app deploy
 
-# After the deployment you will see the URL of your app
+# After the deployment browse to the app
+gcloud app browse
 ```
 
 ## :memo: License
